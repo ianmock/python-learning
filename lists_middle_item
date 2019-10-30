@@ -1,0 +1,19 @@
+#Create a function called middle_element that has one parameter named lst.
+
+#If there are an odd number of elements in lst, the function should return the middle element. If there are an even number of elements, the function should return the average of the middle two elements.
+
+#The index of the middle element can be found by using len(lst)/2. However, division results in a float, and indices must be integers. You can cast that number to be an integer using int(len(lst)/2).
+
+#For lists with an even number of indices, you will want the element at the index found above and also the element at index int(len(lst)/2) - 1
+
+#Write your function here
+def middle_element(lst):
+  even = int(len(lst)/2) - 1
+  odd = int(len(lst)/2)
+  if  len(lst) % 2 != 0:
+    return lst[odd]
+  else:
+    return (lst[even]+lst[odd])/2
+
+#Uncomment the line below when your function is done
+print(middle_element([5, 2, -4, 4, 5]))
